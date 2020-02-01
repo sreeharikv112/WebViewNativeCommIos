@@ -4,6 +4,8 @@ Shows how to communicate from WebView to Native layer and vice-versa.
 
 Using JavaScript, the same can be achieved conveniently.
 
+Source code for [Article in Medium](https://medium.com/@sreeharikv112/communication-from-webview-to-native-ios-android-app-6d842cefe02d)
+
 <br>
 
 <p align="center">  
