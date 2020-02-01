@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewNativeCommIos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-aO-GqO">
+                                <rect key="frame" x="0.0" y="20" width="414" height="876"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LJL-a7-XKs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mB2-qy-dzz">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send data to Web" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8MP-bj-2UI">
+                                                        <rect key="frame" x="8" y="82" width="398" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="953-tr-xSb">
+                                                        <rect key="frame" x="8" y="148" width="101" height="30"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="  SEND DATA   ">
+                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nI-Q6-WxG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaO-Mf-lPW">
+                                                        <rect key="frame" x="8" y="223" width="398" height="326"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="326" id="2FS-zB-bP2"/>
+                                                        </constraints>
+                                                        <wkWebViewConfiguration key="configuration">
+                                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                            <wkPreferences key="preferences"/>
+                                                        </wkWebViewConfiguration>
+                                                    </wkWebView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="953-tr-xSb" secondAttribute="trailing" constant="20" symbolic="YES" id="4cx-U6-nl3"/>
+                                                    <constraint firstItem="8MP-bj-2UI" firstAttribute="leading" secondItem="mB2-qy-dzz" secondAttribute="leading" constant="8" id="CAT-L5-1E8"/>
+                                                    <constraint firstItem="JaO-Mf-lPW" firstAttribute="leading" secondItem="mB2-qy-dzz" secondAttribute="leading" constant="8" id="IES-vC-Imh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JaO-Mf-lPW" secondAttribute="trailing" constant="8" id="NRk-8y-QJB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8MP-bj-2UI" secondAttribute="trailing" constant="8" id="YSc-bO-aJV"/>
+                                                    <constraint firstItem="JaO-Mf-lPW" firstAttribute="top" secondItem="953-tr-xSb" secondAttribute="bottom" constant="45" id="YkQ-sq-QgS"/>
+                                                    <constraint firstItem="953-tr-xSb" firstAttribute="leading" secondItem="mB2-qy-dzz" secondAttribute="leading" constant="8" id="fYS-od-c4g"/>
+                                                    <constraint firstItem="953-tr-xSb" firstAttribute="top" secondItem="8MP-bj-2UI" secondAttribute="bottom" constant="32" id="kRj-VW-mkp"/>
+                                                    <constraint firstItem="8MP-bj-2UI" firstAttribute="top" secondItem="mB2-qy-dzz" secondAttribute="top" constant="82" id="zo3-C7-I93"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="LJL-a7-XKs" firstAttribute="width" secondItem="icc-2O-fXq" secondAttribute="width" id="0M2-Ya-dbI"/>
+                                    <constraint firstItem="LJL-a7-XKs" firstAttribute="trailing" secondItem="MvY-Nr-rJz" secondAttribute="trailing" id="C4e-k5-pYw"/>
+                                    <constraint firstItem="LJL-a7-XKs" firstAttribute="bottom" secondItem="MvY-Nr-rJz" secondAttribute="bottom" id="Hz6-lq-nyh"/>
+                                    <constraint firstItem="LJL-a7-XKs" firstAttribute="top" secondItem="MvY-Nr-rJz" secondAttribute="top" id="Nfc-6e-F56"/>
+                                    <constraint firstItem="LJL-a7-XKs" firstAttribute="leading" secondItem="MvY-Nr-rJz" secondAttribute="leading" id="XIv-tz-pEW"/>
+                                    <constraint firstItem="LJL-a7-XKs" firstAttribute="bottom" secondItem="icc-2O-fXq" secondAttribute="bottom" id="yQZ-qK-a9J"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="MvY-Nr-rJz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="icc-2O-fXq"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UN4-aO-GqO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="Nqc-Kn-rdR"/>
+                            <constraint firstItem="UN4-aO-GqO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PhT-WW-tF4"/>
+                            <constraint firstAttribute="bottom" secondItem="UN4-aO-GqO" secondAttribute="bottom" id="aER-wd-WVC"/>
+                            <constraint firstItem="UN4-aO-GqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qyq-Z6-rr5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mEdtTxt" destination="8MP-bj-2UI" id="NoC-5m-XRs"/>
+                        <outlet property="mWebKitView" destination="JaO-Mf-lPW" id="pX3-C0-fdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
